@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Bem-Vindo</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilo.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="{{ url_for('login') }}" class="btn">Login</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Bem-Vindo ao Projeto de Autenticação!</h1>
+    </main>
+    <footer>
+      <p>© 2023 Projeto de Autenticação. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
