@@ -8,6 +8,23 @@
     />
   </head>
   <body>
-    <h1>Bem-Vindo à sua Home!</h1>
+    <div class="home-container">
+      <div class="home-header">
+        <img
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="Logo"
+        />
+      </div>
+      <h1>Bem-Vindo à sua Home!</h1>
+      <div class="home-content">
+        <p>
+          Explore o que temos para oferecer e aproveite os benefícios da
+          nutrição ativa!
+        </p>
+      </div>
+      <div class="home-footer">
+        <p>© 2023 Seu Projeto. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </body>
 </html>
