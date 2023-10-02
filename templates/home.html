@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nutraining | Home</title>
     <link
       rel="icon"
@@ -13,23 +15,58 @@
     />
   </head>
   <body>
-    <div class="home-container">
-      <div class="home-header">
+    <nav class="navbar">
+      <div class="navbar-logo">
         <img
           src="{{ url_for('static', filename='images/logo.png') }}"
-          alt="Logo"
+          alt="Logo da Nutraining"
         />
       </div>
-      <h1>Bem-Vindo à sua Home!</h1>
+      <a href="{{ url_for('home') }}" class="active">Home</a>
+      <a href="#nutrition">Nutrição</a>
+      <a href="#exercise">Exercícios</a>
+      <a href="#contact">Contato</a>
+      <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+    </nav>
+
+    <main class="home-container">
+      <h1>Bem-Vindo à Nutraining!</h1>
       <div class="home-content">
         <p>
-          Explore o que temos para oferecer e aproveite os benefícios da
-          nutrição ativa!
+          Explore e descubra os benefícios da nutrição ativa e exercícios
+          saudáveis!
         </p>
+
+        <section class="nutrition-section" id="nutrition">
+          <h2>Nutrição</h2>
+          <div class="cards">
+            <div class="card">
+              <img
+                src="{{ url_for('static', filename='images/nutrition1.jpg') }}"
+                alt="Prato com alimentos saudáveis"
+              />
+              <p>Opte por alimentos ricos em fibras, vitaminas e minerais.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="exercise-section" id="exercise">
+          <h2>Exercícios</h2>
+          <div class="cards">
+            <div class="card">
+              <img
+                src="{{ url_for('static', filename='images/exercise1.jpg') }}"
+                alt="Pessoa fazendo exercício de alongamento"
+              />
+              <p>Exercícios de alongamento podem melhorar a flexibilidade.</p>
+            </div>
+          </div>
+        </section>
       </div>
+
       <div class="home-footer">
-        <p>© 2023 Seu Projeto. Todos os direitos reservados.</p>
+        <p>© 2023 Nutraining. Todos os direitos reservados.</p>
       </div>
-    </div>
+    </main>
   </body>
 </html>
