@@ -24,15 +24,11 @@ def login():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-
         user = User.query.filter_by(username=username).first()
-
         if user and check_password_hash(user.password, password):
             session["user_id"] = user.id
             return redirect(url_for("home"))
-
         return redirect(url_for("login"))
-
     return render_template("login.html")
 
 
@@ -40,15 +36,12 @@ def login():
 def home():
     if "user_id" not in session:
         return redirect(url_for("login"))
-
     return render_template("home.html")
-
 
 
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-
         if not User.query.filter_by(username="aluno").first():
             new_user = User(
                 username="aluno",
@@ -56,5 +49,4 @@ if __name__ == "__main__":
             )
             db.session.add(new_user)
             db.session.commit()
-
     app.run(debug=True)

@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/home.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -22,7 +26,7 @@
           alt="Logo da Nutraining"
         />
       </div>
-      <a href="{{ url_for('home') }}" class="active">Home</a>
+      <a href="{{ url_for('index') }}" class="active">Home</a>
       <a href="#nutrition">Nutrição</a>
       <a href="#exercise">Exercícios</a>
       <a href="#contact">Contato</a>
@@ -63,9 +67,45 @@
           </div>
         </section>
       </div>
-
-      <div class="home-footer">
-        <p>© 2023 Nutraining. Todos os direitos reservados.</p>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2>Sobre a Nutraining</h2>
+            <p>
+              Oferecemos informações sobre nutrição e exercícios para uma vida
+              saudável.
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Links úteis</h2>
+            <ul>
+              <li><a href="#">Termos de uso</a></li>
+              <li><a href="#">Política de privacidade</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contate-nos</h2>
+            <p>
+              <a href="mailto:contato@nutraining.com">contato@nutraining.com</a>
+            </p>
+            <p>+55 11 1234-5678</p>
+          </div>
+          <div class="footer-section socials">
+            <h2>Redes Sociais</h2>
+            <a href="#" class="fa-icon">
+              <i class="fab fa-facebook-f"></i> Facebook </a
+            ><br />
+            <a href="#" class="fa-icon">
+              <i class="fab fa-instagram"></i> Instagram </a
+            ><br />
+            <a href="#" class="fa-icon">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 Nutraining. Todos os direitos reservados.</p>
+        </div>
       </div>
     </main>
   </body>
